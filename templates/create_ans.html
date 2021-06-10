@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <h2> Enter your Answer here ...</h2><br>
+    <h6> Question ==> {{que}} </h6>
+    <form class="" action="" method="POST"> <br>
+    <b> Answer : </b> <input type="text" name="answer" value=""> <br><br>
+      {% for x in user %}
+        <lable class = "container"> <br> &nbsp&nbsp&nbsp {{x}}
+          <input type="checkbox" name="user" value={{x}}>
+          <span class = 'checkbox'></span>
+        </lable>
+      {% endfor %}
+      <br><br>
+
+      <button type="submit" class="btn btn-primary btn-lg" name="button"> Add Answer </button>
+    </form>
+  </body>
+</html>

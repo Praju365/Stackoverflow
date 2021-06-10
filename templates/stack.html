@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <h4>StackoverFlow</h4> <br> <br>
+    {% for que , ans in data %}
+     {{que.user}} :<a href="/addans/{{que.id}}"> Q-{{que}} </a> &nbsp&nbsp&nbsp
+     <a href="/update/{{que.id}}"> <button type="button" class="btn btn-primary">Update</button> </a> &nbsp&nbsp&nbsp
+     <a href="/delete/{{que.id}}"> <button type="button" class="btn btn-primary">Delete</button> </a> <br>
+      Answer : =>
+
+            <ol>
+              {% for x in  que.answer %}
+                <li>{{x.user}} : {{x}}</li> <br>
+                  <a href="/update_ans/{{x.id}}"> <button type="button" class="">Update</button> </a> &nbsp&nbsp&nbsp
+                  <a href="/delete_ans/{{x.id}}"> <button type="button" class="">Delete</button> </a> <br>
+              {% endfor %} 
+            </ol>
+
+        <hr>
+      {% endfor %}
+
+<br><br>
+  <a class="btn btn-primary btn-lg" href="/addque" role = 'button'> Add Question </a>&nbsp&nbsp
+
+
+  </body>
+</html>

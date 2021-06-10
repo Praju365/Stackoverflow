@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1> Search for questions and their answers  </h1><br>
+    <form class="" action="/search" method="POST">
+      Search : <input type="text" name="search" value="" placeholder = "Enter Question">
+      <button type="submit" name="button"> SEARCH </button> <br><br>
+    </form>
+
+    <h4>Answer => </h4>
+    <ol>
+      {% for x in ans %}
+
+        <li> {{x}} </li>
+
+      {% endfor %}
+
+    </ol>
+
+
+  </body>
+</html>
